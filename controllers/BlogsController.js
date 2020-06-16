@@ -1,5 +1,5 @@
-const viewPath = ('blogs');
-const Blog = require('../models/blog');
+const viewPath = "blogs";
+const Blog = require("../models/blog").default;
 
 exports.index = (req, res) => {
   res.send("Got to catch em all");
@@ -9,13 +9,13 @@ exports.show = async (req, res) => {
   const blog = await Blog.findById(req.params.id);
   res.render(`${viewPath}/show`, {
     pageTitle: blog.title,
-    blog: blog
+    blog: blog,
   });
 };
 
 exports.new = (req, res) => {
   res.render(`${viewPath}/new`, {
-    pageTitle: 'New Blog'
+    pageTitle: "New Blog",
   });
 };
 

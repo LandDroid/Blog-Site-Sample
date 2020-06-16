@@ -12,7 +12,6 @@ module.exports = (router) => {
   router.get("/blogs", index);
   router.get("/blogs/new", _new);
   router.post("/blogs/create", create);
-  router.post("/blogs/new", _new);
   router.post("/blogs/update", update);
   router.post("/blogs/delete", _delete);
   router.get("/blogs/:id/edit", edit);
