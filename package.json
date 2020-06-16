@@ -15,7 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
     "start": "node app.js",
-    "web": "app.js"
+    "web": "node Sapp.js"
   },
   "repository": {
     "type": "git",
