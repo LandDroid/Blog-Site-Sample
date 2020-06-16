@@ -5,7 +5,7 @@ require("dotenv").config();
 const path = require("path");
 
 // Set our views directory
-app.use(serveStatic(path.join(__dirname, "views")));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use("/css", express.static("assets/css"));
@@ -35,6 +35,6 @@ const routes = require("./routes.js");
 app.use("/", routes);
 
 // Start our server
-app.listen(process.env.PORT || 3000, (port) =>
-  console.log(`Listening on port ${port}`)
+app.listen(process.env.PORT || 3000, (PORT) =>
+  console.log(`Listening on port ${PORT}`)
 );
