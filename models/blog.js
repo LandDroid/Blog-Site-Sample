@@ -34,4 +34,4 @@ BlogSchema.query.published = function () {
   });
 };
 
-module.exports = mongoose.model("Blog", BlogSchema);
+module.exports = mongoose.model("Blogs", BlogSchema);
