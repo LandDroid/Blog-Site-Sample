@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+const mongoose = require("mongoose");
 
-const BlogSchema = new Schema(
+const BlogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -34,4 +34,4 @@ BlogSchema.query.published = function () {
   });
 };
 
-export default model("Blog", BlogSchema);
+module.exports = mongoose.model("Blog", BlogSchema);
