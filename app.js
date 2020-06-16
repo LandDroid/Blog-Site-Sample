@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Our routes
 const routes = require("./routes.js");
-app.use("/", routes);
+app.use("/routes", routes);
 
 // Start our server
 app.listen(process.env.PORT || 3000, (port) =>
